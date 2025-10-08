@@ -218,18 +218,22 @@ export default function Home() {
 
           <div className="flex justify-center">
             <motion.div
-      initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.05, 1] }} 
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className="mx-auto mb-8"
-    >
-            <Image
-              src="/images/logo.png"
-              alt="Community Work"
-              width={450}
-              height={450}
-              className="rounded-xl shadow-2xlobject-contain w-full h-full max-h-[500px] animate-heartbeat"
-            />
+              initial={{ scale: 1 }}
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="mx-auto mb-8"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Community Work"
+                width={450}
+                height={450}
+                className="rounded-xl shadow-2xlobject-contain w-full h-full max-h-[500px] animate-heartbeat"
+              />
             </motion.div>
           </div>
         </div>
@@ -237,54 +241,56 @@ export default function Home() {
 
       {/* Mission Section */}
       <section className="bg-indigo-50 py-24" id="mission">
-  <div className="max-w-5xl mx-auto px-6 text-center">
-    <h2 className="text-3xl font-bold text-blue-800 ">Our Mission</h2>
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-blue-800 ">Our Mission</h2>
 
-    <motion.div
-      initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.05, 1] }} 
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className="mx-auto mb-8"
-    >
-      <Image
-        src="/images/gallery/13.png"
-        alt="Say No to Drugs"
-        width={600}
-        height={150}
-        className="mx-auto"
-      />
-    </motion.div>
+          <motion.div
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="mx-auto mb-8"
+          >
+            <Image
+              src="/images/gallery/13.png"
+              alt="Say No to Drugs"
+              width={600}
+              height={150}
+              className="mx-auto"
+            />
+          </motion.div>
 
-    <p className="text-lg md:text-xl text-center">
-      Under the leadership of Jyothir Ayush Mission, this initiative aims
-      for a drug-free India by promoting peace in schools, colleges, and
-      families. Service committees against drug abuse have been formed at
-      all levels — wards, panchayats, corporations, blocks, taluks, and
-      districts — to identify children and youth using intoxicants and
-      other substances. Awareness programs are conducted to educate them
-      about the harmful effects of drug use and help them refrain from it.
-      In schools and colleges, students are informed about the future
-      consequences of drug use and are encouraged to take a pledge against
-      it, fostering responsible and exemplary citizens of India.
-      <br />
-      <br />
-      For this initiative, the organization collaborates with the Police
-      Department, Excise, Health and Education Departments, central and
-      state governments, residents’ associations, Kudumbashree units,
-      colleges, schools, and other organizations. The program is carried
-      out jointly under the banner of Jyothir Ayush Mission, established
-      by Sri Mookambika Mission Charitable Trust India (Registration No:
-      41/IV/2024). The mission also involves visiting households to
-      educate families about the harmful consequences of drug use and
-      guide them towards building a brighter future for the younger
-      generation.
-      <br />
-      <br />
-      <span className="font-semibold">Chairman:</span> Biju Balan Nambiar, Kannur <br />
-      <span className="font-semibold">Trust Acharya:</span> Mookambika Sajipotti Rudramatham
-    </p>
-  </div>
-</section>
+          <p className="text-lg md:text-xl text-center">
+            Under the leadership of Jyothir Ayush Mission, this initiative aims
+            for a drug-free India by promoting peace in schools, colleges, and
+            families. Service committees against drug abuse have been formed at
+            all levels — wards, panchayats, corporations, blocks, taluks, and
+            districts — to identify children and youth using intoxicants and
+            other substances. Awareness programs are conducted to educate them
+            about the harmful effects of drug use and help them refrain from it.
+            In schools and colleges, students are informed about the future
+            consequences of drug use and are encouraged to take a pledge against
+            it, fostering responsible and exemplary citizens of India.
+            <br />
+            <br />
+            For this initiative, the organization collaborates with the Police
+            Department, Excise, Health and Education Departments, central and
+            state governments, residents’ associations, Kudumbashree units,
+            colleges, schools, and other organizations. The program is carried
+            out jointly under the banner of Jyothir Ayush Mission, established
+            by Sri Mookambika Mission Charitable Trust India (Registration No:
+            41/IV/2024). The mission also involves visiting households to
+            educate families about the harmful consequences of drug use and
+            guide them towards building a brighter future for the younger
+            generation.
+            <br />
+            <br />
+            <span className="font-semibold">Chairman:</span> Biju Balan Nambiar,
+            Kannur <br />
+            <span className="font-semibold">Trust Acharya:</span> Mookambika
+            Sajipotti Rudramatham
+          </p>
+        </div>
+      </section>
 
       {/* Projects Section */}
       <section className="bg-white py-24" id="projects">
@@ -322,14 +328,13 @@ export default function Home() {
             {[...galleryImages, ...galleryImages].map((src, idx) => (
               <div
                 key={idx}
-                className="min-w-[300px] flex-shrink-0 relative rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
+                className="min-w-[400px] h-[300px] flex-shrink-0 relative rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer overflow-hidden"
               >
                 <Image
                   src={src}
                   alt={`Gallery ${idx + 1}`}
-                  width={400}
-                  height={300}
-                  className="rounded-xl transform hover:scale-105 transition-transform duration-500 object-contain"
+                  fill
+                  className="object-cover rounded-xl"
                 />
               </div>
             ))}
@@ -340,19 +345,19 @@ export default function Home() {
       {/* Donate Section */}
       <section className="bg-white py-24 text-center" id="donate">
         <h2 className="text-3xl font-bold text-blue-800 mb-6">Support Us</h2>
-         <motion.div
-      initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.05, 1] }} 
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className="mx-auto mb-8"
-    >
-        <Image
-          src="/images/gallery/donate.png"
-          alt="Donate"
-          width={200}
-          height={50}
-          className="mx-auto "
-        />
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="mx-auto mb-8"
+        >
+          <Image
+            src="/images/gallery/donate.png"
+            alt="Donate"
+            width={200}
+            height={50}
+            className="mx-auto "
+          />
         </motion.div>
         <p className="text-lg mb-6">
           Join hands with us to make a difference. You can donate, volunteer, or
