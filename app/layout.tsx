@@ -2,7 +2,7 @@ import './globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Jyothir Ayush Mission Trust',
+  title: 'Jyothir Ayush Mission',
   description: 'Empowering communities through education, healthcare, and social welfare.',
   keywords: ['charity', 'trust', 'non-profit', 'education', 'healthcare', 'Jyothi Rayush Mission'],
 }
